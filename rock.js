@@ -16,7 +16,7 @@ class rock {
       
       rectMode(CENTER);
       //fill(71,221,247);
-      fill(255);
+      fill(231,196,242);
       rect(pos.x, pos.y, this.width, this.height);
     }
   }

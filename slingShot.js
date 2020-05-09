@@ -30,7 +30,9 @@ class slingShot{
             
             stroke(255);
             strokeWeight(2);
-            line(pointA.x,pointA.y,pointB.x,pointB.y);
+            //line(pointA.x,pointA.y,pointB.x,pointB.y);
+            line(pointA.x , pointA.y - 20, pointB.x , pointB.y - 10);
+            line(pointA.x , pointA.y - 20, pointB.x - 3, pointB.y + 30);
             pop();
         }
     }

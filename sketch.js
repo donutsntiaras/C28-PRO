@@ -34,9 +34,10 @@ function setup(){
 
     land = new Ground(600,595,1200,10);
     
+    //shooter
     land1 = new Ground(250,400,0.1,0.1);
     rock1 = new rock(250,400,30,30);
-       
+           
     sling = new slingShot(rock1.body, land1.body);
 
     h1 = new Ground(750,250,200,4);
@@ -95,7 +96,6 @@ function setup(){
     for(var w=0; w<2; w++){
         boxes15[w] = new box(1070,5,30,30);
     }
-    
     
   
 }
@@ -200,7 +200,7 @@ function mouseReleased(){
 function keyPressed(){
     if(keyCode === 32){
       World.remove(world,rock1.body);
-      rock1 = new rock(250,400,25,25);
+      rock1 = new rock(250,400,30,30);
       sling.attach(rock1.body);
     }
 }
