@@ -8,6 +8,8 @@ class box {
       this.width = width;
       this.height = height;
       World.add(world, this.body);
+
+      this.visibility = 255;
     }
     
     color(r,g,b){
@@ -16,11 +18,20 @@ class box {
     
     display(){
       var pos =this.body.position;
-      //pos.x= mouseX;
-      //pos.y = mouseY;
-      
-      rectMode(CENTER);
-      
+     
+      console.log(this.body.speed);
+
+      if(this.body.speed<7){
+      rectMode(CENTER);      
       rect(pos.x, pos.y, this.width, this.height);
+      }
+      else{
+        World.remove(world, this.body);
+        push();
+        this.Visiblity = this.Visiblity - 5;
+        tint(255,this.Visiblity);
+        pop();
+        score = score + 10;
+      }
     }
   }

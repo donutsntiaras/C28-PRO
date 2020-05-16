@@ -26,6 +26,7 @@ var boxes12 = [];
 var boxes13 = [];
 var boxes14 = [];
 var boxes15 = [];
+var score = 0;
 
 function setup(){
     var canvas = createCanvas(1200,600);
@@ -103,7 +104,13 @@ function setup(){
 function draw(){
     background(0);
     Engine.update(engine);
-   
+
+    stroke(255);
+    strokeWeight(2);
+    textSize(10);
+    text("score:" + score, 600, 100);
+
+    noStroke();
     land.display();
 
     rock1.display();
